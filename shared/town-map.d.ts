@@ -1,0 +1,15 @@
+export const COLS: number;
+export const ROWS: number;
+export type Place = { id: string; name: string; kind: 'shop' | 'work' | 'outdoor' | 'home'; rect: [number, number, number, number]; door: [number, number]; icon: string };
+export const PLACES: Place[];
+export const PLACE: Record<string, Place>;
+export const PLACE_IDS: string[];
+export function isRoad(x: number, y: number): boolean;
+export function findPath(from: [number, number], to: [number, number]): [number, number][] | null;
+export function simplify(path: [number, number][]): [number, number][];
+export function route(fromId: string, toId: string): { points: [number, number][]; tiles: number } | null;
+export function pointAt(points: [number, number][], t: number): [number, number];
+export function spotIn(placeId: string, n: number): [number, number];
+export const RATE: number;
+export const WALK_MIN_PER_TILE: number;
+export function clock(min: number): string;
